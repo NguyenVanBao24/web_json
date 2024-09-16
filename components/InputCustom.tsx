@@ -1,5 +1,5 @@
 import React, { useState, ChangeEvent, FormEvent } from 'react';
-import { FormGroup, FormControlLabel, Checkbox, TextField, Button, Container, Typography, Grid } from '@mui/material';
+import { FormGroup, TextField, Button, Container, Typography, Grid } from '@mui/material';
 
 interface InputCustomProps {
   name: string;
