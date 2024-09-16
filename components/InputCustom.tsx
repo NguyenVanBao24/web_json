@@ -2,9 +2,11 @@ import React, { useState, ChangeEvent, FormEvent } from 'react';
 import { FormGroup, TextField, Button, Container, Typography, Grid } from '@mui/material';
 
 interface InputCustomProps {
-  name: string;
+  name_vn: string;
+  name_en: string;
   tax: string;
-  address: string;
+  address_vn: string;
+  address_en: string;
   image: string;
 }
 
@@ -14,9 +16,11 @@ interface FormProps {
 
 const InputForm: React.FC<FormProps> = ({ onSubmit }) => {
   const [formData, setFormData] = useState({
-    name: '',
+    name_vn: '',
+    name_en: '',
     tax: '',
-    address: '',
+    address_vn: '',
+    address_en: '',
     image: '',
   });
 
@@ -54,9 +58,23 @@ const InputForm: React.FC<FormProps> = ({ onSubmit }) => {
               xs={12}
             >
               <TextField
-                label='Name'
-                name='name'
-                value={formData.name}
+                label='name_vn'
+                name='name_vn'
+                value={formData.name_vn}
+                onChange={handleChange}
+                variant='outlined'
+                fullWidth
+                margin='normal'
+              />
+            </Grid>
+            <Grid
+              item
+              xs={12}
+            >
+              <TextField
+                label='name_en'
+                name='name_en'
+                value={formData.name_en}
                 onChange={handleChange}
                 variant='outlined'
                 fullWidth
@@ -82,9 +100,23 @@ const InputForm: React.FC<FormProps> = ({ onSubmit }) => {
               xs={12}
             >
               <TextField
-                label='address'
-                name='address'
-                value={formData.address}
+                label='address_vn'
+                name='address_vn'
+                value={formData.address_vn}
+                onChange={handleChange}
+                variant='outlined'
+                fullWidth
+                margin='normal'
+              />
+            </Grid>
+            <Grid
+              item
+              xs={12}
+            >
+              <TextField
+                label='address_en'
+                name='address_en'
+                value={formData.address_en}
                 onChange={handleChange}
                 variant='outlined'
                 fullWidth

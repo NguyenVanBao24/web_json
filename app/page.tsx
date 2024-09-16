@@ -4,9 +4,9 @@ import View from '@/components/View';
 import { useState } from 'react';
 
 export default function Home() {
-  const [formData, setformData] = useState<{ name: string; address: string; tax: string; image: string } | null>(null);
+  const [formData, setformData] = useState<{ name_en: string; name_vn: string; address_vn: string; address_en: string; tax: string; image: string } | null>(null);
 
-  const handleOnSubmits = (data: { name: string; address: string; tax: string; image: string }) => {
+  const handleOnSubmits = (data: { name_en: string; name_vn: string; address_vn: string; address_en: string; tax: string; image: string }) => {
     setformData(data);
   };
   return (
